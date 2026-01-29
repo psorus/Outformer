@@ -1,0 +1,5 @@
+defaults:
+  - train: gmm_only
+  - prior: mixture
+  - test: gmm_only
+model_path_updated: null

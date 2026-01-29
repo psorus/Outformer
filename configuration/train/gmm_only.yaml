@@ -1,0 +1,28 @@
+seq_len: 5000
+hyperparameters: {'ignore_index': -33, 'mode': 'random', 'num_test_x': 1}
+device: 'cuda:0'
+batch_size: 2 #8
+epochs: 1500
+num_device: 4
+lr: 1e-4
+steps_per_epoch: 1000
+emsize: 256 #512 #256
+nhead: 4  #8  #4 #8
+nhid: 512  #1024 #1024 #1024 #512
+nlayer: 4 #10 #6 #10
+num_R: 500  # null (using self-attention)
+reuse_data_every_n: 100
+gen_one_train_one: True
+resume_from_ckpt: False
+apply_linear_transform: False  # False
+seed: 0
+model_dir: 'ckpt'
+extra_heading: ''
+use_validation: False
+use_test: False
+logging: True #True #False 
+last_layer_no_R: False
+model_path_updated: null
+T0: 0  # PiKE update weights every T0 epochs, set to 0 to disable
+use_dim: True
+bin_dim: False
