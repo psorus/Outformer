@@ -12,7 +12,7 @@ To **pretrain** our model, use `CUDA_VISIBLE_DEVICES=0 python3 pretrain_parallel
 
 # Checkpoints
 
-We publish our checkpoint at https://huggingface.co/MacrOData-CMU/OutFormer
+We publish our checkpoint at [https://huggingface.co/MacrOData-CMU/OutFormer](https://huggingface.co/MacrOData-CMU/OutFormer/blob/main/outformer.ckpt)
 
 # Benchmark datasets
 
