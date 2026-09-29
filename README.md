@@ -12,7 +12,7 @@ To **pretrain** our model, use `CUDA_VISIBLE_DEVICES=0 python3 pretrain_parallel
 
 # Checkpoints
 
-As anonymized repositories allow for only files up to 100mb, we are only able to publish our checkpoints after the review process.
+We publish our checkpoint at https://huggingface.co/MacrOData-CMU/OutFormer
 
 # Benchmark datasets
 
