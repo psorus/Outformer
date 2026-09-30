@@ -16,10 +16,10 @@ We publish our checkpoint at [https://huggingface.co/MacrOData-CMU/OutFormer](ht
 
 # Benchmark datasets
 
-Our proposed benchmark datasets are given in benchmarks/oddbench and benchmarks/ovrbench. Please note that due to github size limitations, we had to remove 14 datasets from ovrbench until after review. The removed datasets will be released unchanged after review.
+All our datasets are available at https://huggingface.co/MacrOData-CMU/datasets
 
 # Individual results
 
-Per-dataset evaluation results will be released in a cleaned, structured, and searchable format after the review process.
+Further results, individual performance and a leaderboard is available at https://huggingface.co/spaces/MacrOData-CMU/MacrOData
 
 
