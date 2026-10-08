@@ -11,7 +11,6 @@ mixture:
         inflate_full: False
         diversity: 5  # for each dim in [2, max_feature_dim], we generate 'diversity' number of them
         percentile: 0.9
-        data_dir: 'syn_data/MIXTURE'
 
     scm_prob:
         max_feature_dim: 100
@@ -21,7 +20,6 @@ mixture:
         max_hidden_size: 40
         alpha: 1.5
         beta: 4.0
-        data_dir: 'syn_data/MIXTURE'
 
     scm_contextual:
         max_feature_dim: 100
@@ -31,14 +29,3 @@ mixture:
         max_hidden_size: 40
         alpha: 1.5
         beta: 4.0
-        data_dir: 'syn_data/MIXTURE'
-
-    density:
-        max_feature_dim: 100
-        n_numeric: 80
-        n_categorial: 12
-        min_cat: 2
-        max_cat: 12
-        tree_depth: 3
-        prune_prob: 0.2
-        data_dir: 'syn_data/MIXTURE'
