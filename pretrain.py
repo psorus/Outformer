@@ -77,7 +77,6 @@ def make_pl_model(cfg, get_batch_function, seq_len, num_features, hps,
         seq_len=seq_len,
         num_R=num_R
     )
-    print(f"T0 value: {cfg.train.T0}")
     
     pl_model = ZeroShotOD(
         cfg=cfg,
@@ -95,7 +94,6 @@ def make_pl_model(cfg, get_batch_function, seq_len, num_features, hps,
         progress_bar=True,
         train_extra_dict=train_extra_dict,
         resume_from_ckpt=resume_from_ckpt,
-        T0=cfg.train.T0,
         num_bins=cfg.train.num_bins,
         **(model_para_dict if model_para_dict else {})
     )
@@ -137,7 +135,6 @@ def main(cfg: DictConfig):
     apply_linear_transform = train_cfg.apply_linear_transform
     seed = train_cfg.seed
     num_device = train_cfg.num_device
-    T0 = train_cfg.T0
     
     # Prior hyperparameters
     max_feature_dim = cfg.prior.mixture.max_feature_dim
@@ -154,7 +151,7 @@ def main(cfg: DictConfig):
         f"LT{apply_linear_transform}.gen1tr1{gen_one_train_one}."
         f"reuse{train_cfg.reuse_data_every_n}.E{epochs}.step{steps_per_epoch}."
         f"bs{batch_size}.lr{lr}.emb{emsize}.hdim{nhid}.nhead{nhead}."
-        f"nlayer{nlayer}.ndevice{num_device}.T0{T0}_{current_time}"
+        f"nlayer{nlayer}.ndevice{num_device}"
     )
     
     if train_cfg.last_layer_no_R:

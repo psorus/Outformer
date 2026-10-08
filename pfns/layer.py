@@ -1,6 +1,6 @@
 from functools import partial
 from torch import nn
-from torch.nn.modules.transformer import _get_activation_fn, Module, Tensor, Optional, MultiheadAttention, Linear, \
+from torch.nn.modules.transformer import _get_activation_fn, Module, Tensor, MultiheadAttention, Linear, \
     Dropout, LayerNorm
 
 from torch.utils.checkpoint import checkpoint

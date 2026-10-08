@@ -242,7 +242,6 @@ class ZeroShotOD(pl.LightningModule):
                  initializer=None, 
                  efficient_eval_masking=True,
                  num_global_att_tokens=0,
-                 T0=0, 
                  num_bins=5,
                  progress_bar=False,
                  **model_extra_args):
@@ -282,13 +281,10 @@ class ZeroShotOD(pl.LightningModule):
         self.apply_linear_transform = train_cfg.apply_linear_transform
         self.dataloader_para = extra_prior_kwargs_dict.get('pt_dataloader', {'num_workers': 0, 'pin_memory': True})
 
-        self.base_data_path = f'{prior_gmm_cfg.data_dir}/num_feat_{self.max_feature_dim}'
-        
+       
         # Determine training data path
-        if not self.apply_linear_transform and not self.gen_one_train_one:
-            train_data_path = f'{self.base_data_path}/train'
-        else:
-            train_data_path = None
+        # train data path is None here since we generate on the fly
+        train_data_path = None
 
         self.train_dataset = EpochDataset(batch_size=self.batch_size, 
                                           seq_len=seq_len,

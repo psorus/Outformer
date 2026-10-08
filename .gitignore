@@ -24,3 +24,13 @@ env/
 
 # Jupyter
 *.ipynb_checkpoints
+
+# Slurm job logs
+slurm_logs/
+
+# PyTorch Lightning logs
+lightning_logs/
+
+# Hydra run outputs and model checkpoints
+outputs/
+ckpt/

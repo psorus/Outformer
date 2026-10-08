@@ -77,11 +77,9 @@ def beta_icdf(p, a, b, n_grid: int = 1000):
         b = b.unsqueeze(0)
     if p.shape[1] != a.shape[1]:
         p = p.expand(-1, a.shape[1])
-    # Searchsorted per dimension.
+    # Searchsorted per dimension, batched over D on contiguous [D, *] tensors.
     N, D = p.shape
-    idx = torch.empty((N, D), dtype=torch.long, device=p.device)
-    for d in range(D):
-        idx[:, d] = torch.searchsorted(cdf[:, d], p[:, d], right=False).clamp(1, n_grid)
+    idx = torch.searchsorted(cdf.T.contiguous(), p.T.contiguous(), right=False).T.clamp(1, n_grid)
     # Gather interpolation endpoints.
     x0 = x[idx - 1]
     x1 = x[idx]
