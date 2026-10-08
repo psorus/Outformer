@@ -1,0 +1,5 @@
+defaults:
+  - train: cl_trainer
+  - prior: mixture
+  - test: default
+model_path_updated: null

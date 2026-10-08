@@ -1,0 +1,26 @@
+# Benchmark datasets
+benchmarks/
+
+# Hidden files and directories (keep .gitignore itself)
+.*
+!.gitignore
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Packaging / build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+wheels/
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+env/
+
+# Jupyter
+*.ipynb_checkpoints
