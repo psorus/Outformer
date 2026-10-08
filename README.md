@@ -5,7 +5,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.3%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![OddBench](https://img.shields.io/badge/Benchmark-OddBench-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/MacrOData-CMU/OddBench)
 [![OvRBench](https://img.shields.io/badge/Benchmark-OvRBench-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/MacrOData-CMU/OvRBench)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoints-FFD21E)](https://huggingface.co/spaces/MacrOData-CMU/MacrOData)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoints-FFD21E)](https://huggingface.co/MacrOData-CMU/OutFormer/tree/main)
 
 A zero-shot foundation model for tabular outlier detection. OutFormer is pretrained only on
 labeled synthetic data drawn from a mixture of priors (GMMs, structural causal models and
